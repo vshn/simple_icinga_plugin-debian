@@ -1,0 +1,13 @@
+Source: simple-icinga-plugin
+Maintainer: André Keller <andre.keller@vshn.ch>
+Section: python
+Priority: optional
+Build-Depends: python3-setuptools, python3-all, debhelper (>= 9)
+Standards-Version: 3.9.5
+
+Package: python3-simple-icinga-plugin
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}
+Description: simple icinga plugin helper module
+ a simple icinga plugin helper module, providing a few common methods,
+ regularily used in icinga/nagios plugins.

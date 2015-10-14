@@ -1,0 +1,11 @@
+simple-icinga-plugin (0.2.0-1) trusty; urgency=medium
+
+  * New upstream release. 
+
+ -- André Keller <andre.keller@vshn.ch>  Wed, 14 Oct 2015 11:39:01 +0200
+
+simple-icinga-plugin (0.1.0-1) trusty; urgency=medium
+
+  * Initial release
+
+ -- André Keller <andre.keller@vshn.ch>  Tue, 02 Jun 2015 11:31:45 +0200
