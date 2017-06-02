@@ -1,0 +1,6 @@
+/build/
+/debian/files
+/debian/python3-simple-icinga-plugin.debhelper.log
+/debian/python3-simple-icinga-plugin.*.debhelper
+/debian/python3-simple-icinga-plugin.substvars
+/debian/python3-simple-icinga-plugin/
