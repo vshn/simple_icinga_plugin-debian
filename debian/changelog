@@ -1,3 +1,9 @@
+simple-icinga-plugin (0.2.1-1) trusty; urgency=medium
+
+  * New upstream release.
+
+ -- André Keller <andre.keller@vshn.ch>  Mon, 19 Jun 2017 11:18:29 +0000
+
 simple-icinga-plugin (0.2.0-2) trusty; urgency=medium
 
   * Rebuild for PPA.
