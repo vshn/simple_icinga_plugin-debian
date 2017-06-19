@@ -12,3 +12,15 @@ Installation
 .. code-block:: bash
 
     $ pip install simple_icinga_plugin
+
+
+================
+Package Building
+================
+
+PyPI
+====
+
+.. code-block:: bash
+
+    $ 

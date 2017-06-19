@@ -1,12 +1,12 @@
 Metadata-Version: 1.1
 Name: simple_icinga_plugin
-Version: 0.2.0
+Version: 0.2.1
 Summary: simple icinga plugin helper module
 Home-page: https://github.com/vshn/simple_icinga_plugin
 Author: Andre Keller
 Author-email: andre.keller@vshn.ch
 License: BSD
-Description: UNKNOWN
+Description: a simple icinga plugin helper module, providing a few common methods, regularily used in icinga/nagios plugins.
 Platform: UNKNOWN
 Classifier: Development Status :: 3 - Alpha
 Classifier: Intended Audience :: Developers
