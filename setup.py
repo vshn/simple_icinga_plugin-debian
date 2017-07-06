@@ -6,7 +6,7 @@ from setuptools import setup
 
 setup(
     name='simple_icinga_plugin',
-    version='0.2.1',
+    version='0.3.1',
     description='simple icinga plugin helper module',
     long_description=(
         "a simple icinga plugin helper module, providing a few common methods, "
