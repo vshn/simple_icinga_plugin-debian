@@ -7,7 +7,6 @@ simple icinga plugin helper module
 __author__ = "Andre Keller"
 __copyright__ = "Copyright (c) 2015, VSHN AG, info@vshn.ch"
 __license__ = 'BSD'
-__version__ = '0.1.0'
 
 import argparse
 import sys
@@ -108,3 +107,10 @@ def exit_warning(msg, **kwargs):
     All additional arguments are passed as is to the msg.format() method.
     '''
     plugin_exit(msg, prefix='WARNING', code=1, **kwargs)
+
+def exit_unknown_on_exception(func):
+    '''Decorator that will exit with unknown state if an exception occurs.'''
+    try:
+        return func()
+    except Exception as exc:  # pylint: disable=broad-except
+        exit_unknown("Unhandled exception occured: %s" % (exc, ))
