@@ -46,26 +46,28 @@ def plugin_exit(msg, prefix, code, **kwargs):
 
     All additional arguments are passed as is to the msg.format() method.
     '''
-    try:
-        perfdata = []
-        for perf in kwargs.pop('perfdata'):
-            perfdata.append(
-                "'{label}'={value}{uom};{warn};{crit};{min};{max}".format(
-                    label=perf.get('label'),
-                    value=perf.get('value'),
-                    uom=perf.get('uom', ''),
-                    warn=perf.get('warn', ''),
-                    crit=perf.get('crit', ''),
-                    min=perf.get('min', ''),
-                    max=perf.get('max', ''),
-                )
+    perfdata = []
+    for perf in kwargs.pop('perfdata', []):
+        perfdata.append(
+            "'{label}'={value}{uom};{warn};{crit};{min};{max}".format(
+                label=perf.get('label'),
+                value=perf.get('value'),
+                uom=perf.get('uom', ''),
+                warn=perf.get('warn', ''),
+                crit=perf.get('crit', ''),
+                min=perf.get('min', ''),
+                max=perf.get('max', ''),
             )
+        )
+    if perfdata:
         perfdata = "|%s" % " ".join(perfdata)
-
-    except KeyError:
+    else:
         perfdata = ''
 
-    print('%s: %s%s' % (prefix, msg.format(**kwargs), perfdata))
+    if kwargs:
+        msg =msg.format(**kwargs)
+
+    print('%s: %s%s' % (prefix, msg, perfdata))
     sys.exit(code)
 
 def exit_ok(msg, **kwargs):
